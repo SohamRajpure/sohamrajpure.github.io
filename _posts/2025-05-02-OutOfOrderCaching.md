@@ -5,8 +5,6 @@ categories: [Cache, Inference]
 author: Soham Rajpure
 ---
 
-![alt-text-1]()
-
 
 > [Code found here](https://github.com/SohamRajpure/dml-inference). 
 
