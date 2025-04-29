@@ -2,6 +2,7 @@
 layout: post
 title: Is Out-Of-Order Caching Possible?
 categories: [Cache, Inference]
+author: Soham Rajpure
 ---
 
 ![alt-text-1]()
