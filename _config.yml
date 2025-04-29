@@ -3,13 +3,13 @@
 #
 
 # Name of your site (displayed in the header)
-name: Sholto's Blog
+name: Soham's Blog
 
 # Name of the author
-author: Sholto Douglas
+author: Soham Rajpure
 
 # Short bio or description (displayed in the header)
-description: A collection of experiments
+description: A collection of thoughts
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
 avatar: /images/loss_surface.png
@@ -21,15 +21,15 @@ theme: jekyll-theme-minimal
 # Includes an icon in the footer for each username you enter
 footer-links:
   dribbble:
-  email: sholto.douglas1@gmail.com
+  email: srajpure@outlook.com
   facebook:
   flickr:
-  github: sholtodouglas
-  instagram: _sholto
-  linkedin:
+  github: SohamRajpure
+  instagram: 
+  linkedin: https://www.linkedin.com/in/soham-rajpure-501b441ab/
   pinterest:
   rss:
-  twitter: _sholtodouglas
+  twitter:
   stackoverflow:
   youtube: # channel/<your_long_string> or user/<user-name>
   googleplus: # anything in your profile username that comes after plus.google.com/
@@ -41,12 +41,12 @@ footer-links:
 disqus:
 
 # Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
-google_analytics: UA-168930089-1
+google_analytics:
 
 # Your website URL (e.g. http://amitmerchant1990.github.io or http://www.amitmerchant.com)
 # Used for Sitemap.xml and your RSS feed
-url: http://www.sholtodouglas.github.io
-enforce_ssl: http://www.sholtodouglas.github.io
+url: http://www.sohamrajpure.github.io
+enforce_ssl: http://www.sohamrajpure.github.io
 
 # If you're hosting your site at a Project repository on GitHub pages
 # (http://yourusername.github.io/repository-name)
