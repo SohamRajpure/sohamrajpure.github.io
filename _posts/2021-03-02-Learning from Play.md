@@ -5,6 +5,9 @@ categories: [cache, inference]
 author: Soham Rajpure
 ---
 
+{% description="Possibilities of Out of Order Caching" %}
+
+
 > [Code found here](https://github.com/sholtodouglas/learning_from_play). 
 
 * TOC
