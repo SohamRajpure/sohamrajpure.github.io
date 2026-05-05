@@ -2,49 +2,124 @@
 layout: default
 ---
 
-<div class="posts">
-  {% for post in paginator.posts %}
-    <article class="post">
-      <a href="{{site.baseurl}}{{post.url}}">
-        <h1>{{ post.title }}</h1>
-        <img src="{{site.baseurl}}{{post.img}}">
+<div class="portfolio">
 
-        <div>
-          <p class="post_date">{{ post.date | date: "%B %e, %Y" }}</p>
+  <section class="hero">
+    <h1 class="hero-name">Soham Rajpure</h1>
+    <p class="hero-role">Software Engineer &middot; Systems &amp; ML</p>
+    <p class="hero-bio">
+      I build infrastructure for distributed ML systems. Currently contributing to
+      <a href="https://github.com/ray-project/ray">Ray</a> — working on weight synchronization
+      between training and serving for multi-turn RL. My broader interest is in making large-scale
+      inference cheaper: caching strategies, speculative decoding, and efficient distributed coordination.
+    </p>
+    <div class="hero-links">
+      <a href="mailto:srajpure@outlook.com" class="hero-link">Email</a>
+      <a href="https://github.com/SohamRajpure" class="hero-link">GitHub</a>
+      <a href="https://linkedin.com/in/soham-rajpure-501b441ab" class="hero-link">LinkedIn</a>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">Experience</h2>
+    <div class="experience-list">
+
+      <div class="experience-item">
+        <div class="experience-header">
+          <div>
+            <h3 class="experience-company">Ray (Anyscale)</h3>
+            <p class="experience-role">Open Source Contributor</p>
+          </div>
+          <span class="experience-date">Mar 2026 &ndash; Present</span>
         </div>
-      </a>
-      <div class="entry">
-        {{ post.excerpt }}
+        <ul class="experience-bullets">
+          <li>Enabling RL weight synchronization between RayServe and SGLang using Ray ObjectRefs to minimize latency in inference-trainer coordination for multi-turn RL rollouts.</li>
+          <li>Engineering ingress mixins for collective RPC with session affinity routing to ensure deterministic KV-cache consistency across distributed replicas.</li>
+          <li>Critical fix for a Ray Train v2 lifecycle bug involving zombie PlacementGroupCleaner actors, prioritized for immediate patch release due to community impact.</li>
+        </ul>
       </div>
 
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
-    </article>
-  {% endfor %}
+      <div class="experience-item">
+        <div class="experience-header">
+          <div>
+            <h3 class="experience-company">C3 AI</h3>
+            <p class="experience-role">Software Engineer Intern &middot; ML Platform</p>
+          </div>
+          <span class="experience-date">May &ndash; Aug 2025</span>
+        </div>
+        <ul class="experience-bullets">
+          <li>Architected a distributed health management system for JVM-based residents (ML Agents, Model Inference Services, Pipelines) across multi-node Kubernetes clusters, enabling automatic blacklisting, probing, and recovery.</li>
+          <li>Developed reactive error handling workflows with exponential backoff, batched node-level checks, and consensus propagation using broadcast messages in multi-leader scenarios.</li>
+          <li>Integrated custom health definitions, deploy-time blacklisting, and dispatcher APIs for fault-tolerant routing in the hot-path of every Engine request.</li>
+        </ul>
+      </div>
 
-  <!-- pagination -->
-  {% if paginator.total_pages > 1 %}
-  <div class="pagination">
-    {% if paginator.previous_page %}
-      <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>
-    {% else %}
-      <span>&laquo; Prev</span>
-    {% endif %}
+      <div class="experience-item">
+        <div class="experience-header">
+          <div>
+            <h3 class="experience-company">UIUC CS 446: Machine Learning</h3>
+            <p class="experience-role">Course Assistant</p>
+          </div>
+          <span class="experience-date">Aug &ndash; Dec 2025</span>
+        </div>
+        <ul class="experience-bullets">
+          <li>Evaluated programming assignments, mathematical derivations, and theoretical problems for 300+ students on topics spanning algorithms and model optimization.</li>
+        </ul>
+      </div>
 
-    {% for page in (1..paginator.total_pages) %}
-      {% if page == paginator.page %}
-        <span class="webjeda">{{ page }}</span>
-      {% elsif page == 1 %}
-        <a href="{{ '/' | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
-      {% else %}
-        <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
-      {% endif %}
-    {% endfor %}
+    </div>
+  </section>
 
-    {% if paginator.next_page %}
-      <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>
-    {% else %}
-      <span>Next &raquo;</span>
-    {% endif %}
-  </div>
+  <section class="section section-alt">
+    <h2 class="section-title">Projects</h2>
+    <div class="projects-grid">
+
+      <div class="project-card">
+        <h3 class="project-name">Real-Time Linux Kernel Scheduler (EDF)</h3>
+        <p class="project-tech">C &middot; Linux Kernel &middot; Procfs &middot; Kernel Synchronization</p>
+        <p class="project-desc">Linux kernel module implementing Earliest Deadline First scheduling with procfs-based task lifecycle management. Zero deadline misses under heavy context-switching via mutexes, spinlocks, and wake-up signaling.</p>
+      </div>
+
+      <div class="project-card">
+        <h3 class="project-name">Optimized Convolutional Forward Pass</h3>
+        <p class="project-tech">CUDA C++ &middot; Nsight Systems &middot; Nsight Compute</p>
+        <p class="project-desc">GPU-accelerated forward pass for LeNet-5 on Fashion MNIST. Applied tiled shared memory, constant memory for weights, FP16 arithmetic, and CUDA streams to overlap data transfer and computation.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-group">
+        <h4 class="skill-label">Languages</h4>
+        <p>C/C++, CUDA C, Java, Python, SQL</p>
+      </div>
+      <div class="skill-group">
+        <h4 class="skill-label">Systems</h4>
+        <p>Linux, Kubernetes, Docker, Slurm, Nsight Systems/Compute, Prometheus</p>
+      </div>
+      <div class="skill-group">
+        <h4 class="skill-label">ML Infrastructure</h4>
+        <p>Ray Train / Serve / Core, SGLang</p>
+      </div>
+    </div>
+  </section>
+
+  {% if site.posts.size > 0 %}
+  <section class="section section-alt">
+    <h2 class="section-title">Writing</h2>
+    <div class="posts-list">
+      {% for post in site.posts limit:4 %}
+      <a href="{{ site.baseurl }}{{ post.url }}" class="post-item">
+        <span class="post-item-title">{{ post.title }}</span>
+        <span class="post-item-date">{{ post.date | date: "%b %Y" }}</span>
+      </a>
+      {% endfor %}
+    </div>
+    <a href="{{ site.baseurl }}/blog" class="view-all">All posts &rarr;</a>
+  </section>
   {% endif %}
+
 </div>

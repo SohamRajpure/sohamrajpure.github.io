@@ -4,10 +4,16 @@ title: About
 permalink: /about/
 ---
 
-I am an undergraduate at University of Illinois Urbana-Champaign (UIUC) with a strong interest in distributed inference for large model deployments because of its potential to lower the cost of AI, thereby broadening its scope and accessibility.
+I'm a fourth-year undergraduate at the University of Illinois Urbana-Champaign studying Computer Science and Bioengineering, graduating May 2026.
 
-I am currently exploring ideas about caching strategies for inference and optimistically looking into out-of-order generation of anchor tokens within a window as a form of speculative decoding. 
+My work sits at the intersection of distributed systems and ML infrastructure. I'm interested in how we make large model deployments faster and cheaper — inference caching, speculative decoding, and efficient distributed coordination between training and serving systems.
 
-Outside of research, I enjoy hiking and spending time outdoors.
+Right now I'm contributing to [Ray](https://github.com/ray-project/ray), working on weight synchronization between RayServe and SGLang for multi-turn RL rollouts, and fixing lifecycle bugs in Ray Train v2. Before that I spent a summer at C3 AI building distributed health management infrastructure for their ML platform across multi-node Kubernetes clusters.
 
-I am eager to get involved with research projects focused on systems for AI. Please feel free to reach out to me via any of the contact methods listed at the bottom of this page!
+I also served as a Course Assistant for UIUC's graduate machine learning course (CS 446), evaluating work for 300+ students on topics spanning optimization, learning theory, and modern ML algorithms.
+
+On the systems side, I've built a real-time EDF kernel scheduler as a Linux kernel module and optimized GPU convolutional layers using CUDA — shared memory tiling, FP16, CUDA streams.
+
+Outside of work I enjoy hiking and spending time outdoors.
+
+Feel free to reach out at [srajpure@outlook.com](mailto:srajpure@outlook.com).
